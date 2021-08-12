@@ -62,7 +62,10 @@ export default function Numbers() {
         <section className="card">
         <Title />
         <div className="fields">
-            <p>{numero}  {operador} {numero2}</p>
+            <input type="text" value={numero} />
+            <input type="text" value={operador} />
+            <input type="text" value={numero2} />
+            {/* <p>{numero}  {operador} {numero2}</p> */}
         </div>
         <div className="numbers">
             <div className="divisao-1">
@@ -81,14 +84,16 @@ export default function Numbers() {
                 <button onClick={handleClick} value="7">7</button>
                 <button onClick ={handleClick} value="8">8</button>
                 <button onClick={handleClick} value="9">9</button>
-                <button onClick={handleOperator} value="*">*</button>
+                <button onClick={handleOperator} value="*">x</button>
             </div>
             <div className="divisao-4">
                 <button onClick={handleZerar}>C</button>
                 <button onClick={handleClick} value="0">0</button>
-                <button onClick={handleOperator} value="/">/</button>
                 <button onClick={handleOperator} value="%">%</button>
-                <button onClick={handleOperator}>=</button>
+                <button onClick={handleOperator} value="/">/</button>
+            </div>
+            <div className="divisao-5">
+                <button className="equal" onClick={handleOperator}>=</button>
             </div>
         </div>
     </section>
